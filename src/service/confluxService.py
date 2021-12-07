@@ -27,7 +27,7 @@ class ConfluxService():
             
     def getPrivateKey(self):
         # private key还是要读文件的
-        private_key = "0B6A7A4CF9C143421D948E6E33C7C84BF6882E39F8B2EE56FD29303E659E4F3B"
+        private_key = ""
         return private_key
 
     def getOwnerAddress(self):
