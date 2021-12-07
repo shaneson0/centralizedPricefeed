@@ -7,9 +7,9 @@
  * @FilePath: /triangleBlockchainOracle/readme.md
 -->
 
-# Triangle-pricefeed
+# Centralized-pricefeed
 
-Triangle-pricefeed is a centralized blockchain oracle service, reading data from binance and okex api, and writing data to triangleOracle contract.
+Centralized-pricefeed is a Centralized blockchain oracle service, reading data from binance and okex api, and writing data to the contract.
 
 
 ## Perpare
