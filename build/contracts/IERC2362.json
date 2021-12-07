@@ -1,0 +1,481 @@
+{
+  "contractName": "IERC2362",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "valueFor",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.11+commit.5ef660b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_id\",\"type\":\"bytes32\"}],\"name\":\"valueFor\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"EIP2362 Interface for pull oracles https://github.com/adoracles/EIPs/blob/erc-2362/EIPS/eip-2362.md\",\"kind\":\"dev\",\"methods\":{\"valueFor(bytes32)\":{\"details\":\"Exposed function pertaining to EIP standards\",\"params\":{\"_id\":\"bytes32 ID of the query\"},\"returns\":{\"_0\":\"int,uint,uint returns the value, timestamp, and status code of query\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IERC2362.sol\":\"IERC2362\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IERC2362.sol\":{\"keccak256\":\"0x815bdb16a2aa771bc125aa2494abca98632918461ffc3b682e1872f300f5369f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a5e0dfe7b9fb791999375441c25bcfcc4a2af09d267b1918058adfc14e8b6361\",\"dweb:/ipfs/QmXQKLNj4seHyoUXu961LW6GPgMLjRzMkv7Ey2pq7xdbJ4\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.11;\n\n/**\n* @dev EIP2362 Interface for pull oracles\n* https://github.com/adoracles/EIPs/blob/erc-2362/EIPS/eip-2362.md\n*/\ninterface IERC2362\n{\n    /**\n     * @dev Exposed function pertaining to EIP standards\n     * @param _id bytes32 ID of the query\n     * @return int,uint,uint returns the value, timestamp, and status code of query\n     */\n    function valueFor(bytes32 _id) external view returns(int256,uint256,uint256);\n}\n",
+  "sourcePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IERC2362.sol",
+  "ast": {
+    "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IERC2362.sol",
+    "exportedSymbols": {
+      "IERC2362": [
+        396
+      ]
+    },
+    "id": 397,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 382,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:4"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 383,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:115:4",
+          "text": " @dev EIP2362 Interface for pull oracles\n https://github.com/adoracles/EIPs/blob/erc-2362/EIPS/eip-2362.md"
+        },
+        "fullyImplemented": false,
+        "id": 396,
+        "linearizedBaseContracts": [
+          396
+        ],
+        "name": "IERC2362",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 384,
+              "nodeType": "StructuredDocumentation",
+              "src": "198:194:4",
+              "text": " @dev Exposed function pertaining to EIP standards\n @param _id bytes32 ID of the query\n @return int,uint,uint returns the value, timestamp, and status code of query"
+            },
+            "functionSelector": "f78eea83",
+            "id": 395,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "valueFor",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 387,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 386,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 395,
+                  "src": "415:11:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 385,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "415:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "414:13:4"
+            },
+            "returnParameters": {
+              "id": 394,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 389,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 395,
+                  "src": "450:6:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 388,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "450:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 391,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 395,
+                  "src": "457:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 390,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "457:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 393,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 395,
+                  "src": "465:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 392,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "465:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "449:24:4"
+            },
+            "scope": 396,
+            "src": "397:77:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 397,
+        "src": "173:303:4"
+      }
+    ],
+    "src": "32:445:4"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IERC2362.sol",
+      "exportedSymbols": {
+        "IERC2362": [
+          396
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".11"
+          ]
+        },
+        "id": 382,
+        "name": "PragmaDirective",
+        "src": "32:23:4"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            396
+          ],
+          "name": "IERC2362",
+          "scope": 397
+        },
+        "children": [
+          {
+            "attributes": {
+              "text": " @dev EIP2362 Interface for pull oracles\n https://github.com/adoracles/EIPs/blob/erc-2362/EIPS/eip-2362.md"
+            },
+            "id": 383,
+            "name": "StructuredDocumentation",
+            "src": "57:115:4"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "f78eea83",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "valueFor",
+              "overrides": null,
+              "scope": 396,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Exposed function pertaining to EIP standards\n @param _id bytes32 ID of the query\n @return int,uint,uint returns the value, timestamp, and status code of query"
+                },
+                "id": 384,
+                "name": "StructuredDocumentation",
+                "src": "198:194:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_id",
+                      "overrides": null,
+                      "scope": 395,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 385,
+                        "name": "ElementaryTypeName",
+                        "src": "415:7:4"
+                      }
+                    ],
+                    "id": 386,
+                    "name": "VariableDeclaration",
+                    "src": "415:11:4"
+                  }
+                ],
+                "id": 387,
+                "name": "ParameterList",
+                "src": "414:13:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 395,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int256",
+                          "type": "int256"
+                        },
+                        "id": 388,
+                        "name": "ElementaryTypeName",
+                        "src": "450:6:4"
+                      }
+                    ],
+                    "id": 389,
+                    "name": "VariableDeclaration",
+                    "src": "450:6:4"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 395,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 390,
+                        "name": "ElementaryTypeName",
+                        "src": "457:7:4"
+                      }
+                    ],
+                    "id": 391,
+                    "name": "VariableDeclaration",
+                    "src": "457:7:4"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 395,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 392,
+                        "name": "ElementaryTypeName",
+                        "src": "465:7:4"
+                      }
+                    ],
+                    "id": 393,
+                    "name": "VariableDeclaration",
+                    "src": "465:7:4"
+                  }
+                ],
+                "id": 394,
+                "name": "ParameterList",
+                "src": "449:24:4"
+              }
+            ],
+            "id": 395,
+            "name": "FunctionDefinition",
+            "src": "397:77:4"
+          }
+        ],
+        "id": 396,
+        "name": "ContractDefinition",
+        "src": "173:303:4"
+      }
+    ],
+    "id": 397,
+    "name": "SourceUnit",
+    "src": "32:445:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.11+commit.5ef660b1.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-12-07T12:42:03.990Z",
+  "devdoc": {
+    "details": "EIP2362 Interface for pull oracles https://github.com/adoracles/EIPs/blob/erc-2362/EIPS/eip-2362.md",
+    "kind": "dev",
+    "methods": {
+      "valueFor(bytes32)": {
+        "details": "Exposed function pertaining to EIP standards",
+        "params": {
+          "_id": "bytes32 ID of the query"
+        },
+        "returns": {
+          "_0": "int,uint,uint returns the value, timestamp, and status code of query"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

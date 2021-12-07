@@ -1,0 +1,1208 @@
+{
+  "contractName": "ILockupContractFactory",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_lqtyTokenAddress",
+          "type": "address"
+        }
+      ],
+      "name": "LQTYTokenAddressSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_lockupContractAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_beneficiary",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_vestingStartTime",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_vestingEndTime",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_deployer",
+          "type": "address"
+        }
+      ],
+      "name": "LockupContractDeployedThroughFactory",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_lqtyTokenAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setAddresses",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_beneficiary",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_vestingStartTime",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_vestingEndTime",
+          "type": "uint256"
+        }
+      ],
+      "name": "deployLockupContract",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_addr",
+          "type": "address"
+        }
+      ],
+      "name": "isRegisteredLockup",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.11+commit.5ef660b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_lqtyTokenAddress\",\"type\":\"address\"}],\"name\":\"LQTYTokenAddressSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_lockupContractAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_beneficiary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_vestingStartTime\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_vestingEndTime\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_deployer\",\"type\":\"address\"}],\"name\":\"LockupContractDeployedThroughFactory\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_beneficiary\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_vestingStartTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_vestingEndTime\",\"type\":\"uint256\"}],\"name\":\"deployLockupContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_addr\",\"type\":\"address\"}],\"name\":\"isRegisteredLockup\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_lqtyTokenAddress\",\"type\":\"address\"}],\"name\":\"setAddresses\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ILockupContractFactory.sol\":\"ILockupContractFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ILockupContractFactory.sol\":{\"keccak256\":\"0x589d1251aeb611cc7bb4d404584de37484882fdc94e94aecce405b54834beb63\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://996283a225f1bfcb0fa750c7691199df84626d17077f6d99c74ccfe78ad85768\",\"dweb:/ipfs/QmaWWR6xrWDrE7UPpAZ8UFbwASXUSvMkbGGQXf4W7WQEKy\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.6.11;\n    \ninterface ILockupContractFactory {\n    \n    // --- Events ---\n\n    event LQTYTokenAddressSet(address _lqtyTokenAddress);\n    event LockupContractDeployedThroughFactory(\n            address _lockupContractAddress, address _beneficiary,\n            uint _vestingStartTime, uint _vestingEndTime, address _deployer);\n\n    // --- Functions ---\n\n    function setAddresses(address _lqtyTokenAddress) external;\n\n    function deployLockupContract(address _beneficiary, uint _vestingStartTime, uint _vestingEndTime) external;\n\n    function isRegisteredLockup(address _addr) external view returns (bool);\n}\n",
+  "sourcePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ILockupContractFactory.sol",
+  "ast": {
+    "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ILockupContractFactory.sol",
+    "exportedSymbols": {
+      "ILockupContractFactory": [
+        12418
+      ]
+    },
+    "id": 12419,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12380,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:26"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 12418,
+        "linearizedBaseContracts": [
+          12418
+        ],
+        "name": "ILockupContractFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 12384,
+            "name": "LQTYTokenAddressSet",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 12383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12382,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_lqtyTokenAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12384,
+                  "src": "155:25:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12381,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "155:7:26",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "154:27:26"
+            },
+            "src": "129:53:26"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 12396,
+            "name": "LockupContractDeployedThroughFactory",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 12395,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12386,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_lockupContractAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12396,
+                  "src": "243:30:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12385,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "243:7:26",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12388,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_beneficiary",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12396,
+                  "src": "275:20:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12387,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "275:7:26",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12390,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_vestingStartTime",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12396,
+                  "src": "309:22:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12389,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "309:4:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12392,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_vestingEndTime",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12396,
+                  "src": "333:20:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12391,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "333:4:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12394,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_deployer",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12396,
+                  "src": "355:17:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12393,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "355:7:26",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "229:144:26"
+            },
+            "src": "187:187:26"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "81d3c435",
+            "id": 12401,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setAddresses",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 12399,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12398,
+                  "mutability": "mutable",
+                  "name": "_lqtyTokenAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12401,
+                  "src": "428:25:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12397,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "428:7:26",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "427:27:26"
+            },
+            "returnParameters": {
+              "id": 12400,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "463:0:26"
+            },
+            "scope": 12418,
+            "src": "406:58:26",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "573293ae",
+            "id": 12410,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deployLockupContract",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 12408,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12403,
+                  "mutability": "mutable",
+                  "name": "_beneficiary",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12410,
+                  "src": "500:20:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12402,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "500:7:26",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12405,
+                  "mutability": "mutable",
+                  "name": "_vestingStartTime",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12410,
+                  "src": "522:22:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12404,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "522:4:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12407,
+                  "mutability": "mutable",
+                  "name": "_vestingEndTime",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12410,
+                  "src": "546:20:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12406,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "546:4:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "499:68:26"
+            },
+            "returnParameters": {
+              "id": 12409,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "576:0:26"
+            },
+            "scope": 12418,
+            "src": "470:107:26",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "bb7603f1",
+            "id": 12417,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isRegisteredLockup",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 12413,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12412,
+                  "mutability": "mutable",
+                  "name": "_addr",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12417,
+                  "src": "611:13:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12411,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "611:7:26",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "610:15:26"
+            },
+            "returnParameters": {
+              "id": 12416,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12415,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12417,
+                  "src": "649:4:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 12414,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "649:4:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "648:6:26"
+            },
+            "scope": 12418,
+            "src": "583:72:26",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 12419,
+        "src": "62:595:26"
+      }
+    ],
+    "src": "33:625:26"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ILockupContractFactory.sol",
+      "exportedSymbols": {
+        "ILockupContractFactory": [
+          12418
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".11"
+          ]
+        },
+        "id": 12380,
+        "name": "PragmaDirective",
+        "src": "33:23:26"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            12418
+          ],
+          "name": "ILockupContractFactory",
+          "scope": 12419
+        },
+        "children": [
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "LQTYTokenAddressSet"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "_lqtyTokenAddress",
+                      "overrides": null,
+                      "scope": 12384,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 12381,
+                        "name": "ElementaryTypeName",
+                        "src": "155:7:26"
+                      }
+                    ],
+                    "id": 12382,
+                    "name": "VariableDeclaration",
+                    "src": "155:25:26"
+                  }
+                ],
+                "id": 12383,
+                "name": "ParameterList",
+                "src": "154:27:26"
+              }
+            ],
+            "id": 12384,
+            "name": "EventDefinition",
+            "src": "129:53:26"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "LockupContractDeployedThroughFactory"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "_lockupContractAddress",
+                      "overrides": null,
+                      "scope": 12396,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 12385,
+                        "name": "ElementaryTypeName",
+                        "src": "243:7:26"
+                      }
+                    ],
+                    "id": 12386,
+                    "name": "VariableDeclaration",
+                    "src": "243:30:26"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "_beneficiary",
+                      "overrides": null,
+                      "scope": 12396,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 12387,
+                        "name": "ElementaryTypeName",
+                        "src": "275:7:26"
+                      }
+                    ],
+                    "id": 12388,
+                    "name": "VariableDeclaration",
+                    "src": "275:20:26"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "_vestingStartTime",
+                      "overrides": null,
+                      "scope": 12396,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 12389,
+                        "name": "ElementaryTypeName",
+                        "src": "309:4:26"
+                      }
+                    ],
+                    "id": 12390,
+                    "name": "VariableDeclaration",
+                    "src": "309:22:26"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "_vestingEndTime",
+                      "overrides": null,
+                      "scope": 12396,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 12391,
+                        "name": "ElementaryTypeName",
+                        "src": "333:4:26"
+                      }
+                    ],
+                    "id": 12392,
+                    "name": "VariableDeclaration",
+                    "src": "333:20:26"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "_deployer",
+                      "overrides": null,
+                      "scope": 12396,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 12393,
+                        "name": "ElementaryTypeName",
+                        "src": "355:7:26"
+                      }
+                    ],
+                    "id": 12394,
+                    "name": "VariableDeclaration",
+                    "src": "355:17:26"
+                  }
+                ],
+                "id": 12395,
+                "name": "ParameterList",
+                "src": "229:144:26"
+              }
+            ],
+            "id": 12396,
+            "name": "EventDefinition",
+            "src": "187:187:26"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "81d3c435",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setAddresses",
+              "overrides": null,
+              "scope": 12418,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_lqtyTokenAddress",
+                      "overrides": null,
+                      "scope": 12401,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 12397,
+                        "name": "ElementaryTypeName",
+                        "src": "428:7:26"
+                      }
+                    ],
+                    "id": 12398,
+                    "name": "VariableDeclaration",
+                    "src": "428:25:26"
+                  }
+                ],
+                "id": 12399,
+                "name": "ParameterList",
+                "src": "427:27:26"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 12400,
+                "name": "ParameterList",
+                "src": "463:0:26"
+              }
+            ],
+            "id": 12401,
+            "name": "FunctionDefinition",
+            "src": "406:58:26"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "573293ae",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "deployLockupContract",
+              "overrides": null,
+              "scope": 12418,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_beneficiary",
+                      "overrides": null,
+                      "scope": 12410,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 12402,
+                        "name": "ElementaryTypeName",
+                        "src": "500:7:26"
+                      }
+                    ],
+                    "id": 12403,
+                    "name": "VariableDeclaration",
+                    "src": "500:20:26"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_vestingStartTime",
+                      "overrides": null,
+                      "scope": 12410,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 12404,
+                        "name": "ElementaryTypeName",
+                        "src": "522:4:26"
+                      }
+                    ],
+                    "id": 12405,
+                    "name": "VariableDeclaration",
+                    "src": "522:22:26"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_vestingEndTime",
+                      "overrides": null,
+                      "scope": 12410,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 12406,
+                        "name": "ElementaryTypeName",
+                        "src": "546:4:26"
+                      }
+                    ],
+                    "id": 12407,
+                    "name": "VariableDeclaration",
+                    "src": "546:20:26"
+                  }
+                ],
+                "id": 12408,
+                "name": "ParameterList",
+                "src": "499:68:26"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 12409,
+                "name": "ParameterList",
+                "src": "576:0:26"
+              }
+            ],
+            "id": 12410,
+            "name": "FunctionDefinition",
+            "src": "470:107:26"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "bb7603f1",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "isRegisteredLockup",
+              "overrides": null,
+              "scope": 12418,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_addr",
+                      "overrides": null,
+                      "scope": 12417,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 12411,
+                        "name": "ElementaryTypeName",
+                        "src": "611:7:26"
+                      }
+                    ],
+                    "id": 12412,
+                    "name": "VariableDeclaration",
+                    "src": "611:13:26"
+                  }
+                ],
+                "id": 12413,
+                "name": "ParameterList",
+                "src": "610:15:26"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 12417,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 12414,
+                        "name": "ElementaryTypeName",
+                        "src": "649:4:26"
+                      }
+                    ],
+                    "id": 12415,
+                    "name": "VariableDeclaration",
+                    "src": "649:4:26"
+                  }
+                ],
+                "id": 12416,
+                "name": "ParameterList",
+                "src": "648:6:26"
+              }
+            ],
+            "id": 12417,
+            "name": "FunctionDefinition",
+            "src": "583:72:26"
+          }
+        ],
+        "id": 12418,
+        "name": "ContractDefinition",
+        "src": "62:595:26"
+      }
+    ],
+    "id": 12419,
+    "name": "SourceUnit",
+    "src": "33:625:26"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.11+commit.5ef660b1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-12-04T04:33:24.875Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

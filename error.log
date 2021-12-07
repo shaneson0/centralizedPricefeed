@@ -1,0 +1,9 @@
+
+
+【网络问题】
+
+1.  Max retries exceeded with url: /api/spot/v3/instruments/CFX-USDT/trades
+
+
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.okex.com', port=443): Max retries exceeded with url: /api/spot/v3/instruments/CFX-USDT/trades (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1111159b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+

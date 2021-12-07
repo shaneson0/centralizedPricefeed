@@ -1,0 +1,295 @@
+{
+  "contractName": "ILiquityBase",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "priceFeed",
+      "outputs": [
+        {
+          "internalType": "contract IPriceFeed",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.11+commit.5ef660b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"priceFeed\",\"outputs\":[{\"internalType\":\"contract IPriceFeed\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ILiquityBase.sol\":\"ILiquityBase\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ILiquityBase.sol\":{\"keccak256\":\"0x7757d43ac67b34b79f1d7812cf89f9669da7230df3a18044387d2866de85587d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4a36d4c63a019267109bd9996473391ef587795fdc07dc65da1a01be9d8170df\",\"dweb:/ipfs/QmWdZcvZ4GYc4FJyY8uJn1bNKdCkxnamJKuHvW8RLQvBf6\"]},\"/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IPriceFeed.sol\":{\"keccak256\":\"0x8831c3e2112e1c395d372b6fb591a4548f5a1ed8df63aa38ccbc817cccb4dc3d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://19460a762dc4f5c486e9075ccfe9e798b2b199168a47998bc4203028197e7d03\",\"dweb:/ipfs/QmW9Sfvm6AYHCK4NUBMzu85NAne111haHYtyRATpqSC64Z\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.6.11;\n\nimport \"./IPriceFeed.sol\";\n\n\ninterface ILiquityBase {\n    function priceFeed() external view returns (IPriceFeed);\n}\n",
+  "sourcePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ILiquityBase.sol",
+  "ast": {
+    "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ILiquityBase.sol",
+    "exportedSymbols": {
+      "ILiquityBase": [
+        12378
+      ]
+    },
+    "id": 12379,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12371,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:25"
+      },
+      {
+        "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IPriceFeed.sol",
+        "file": "./IPriceFeed.sol",
+        "id": 12372,
+        "nodeType": "ImportDirective",
+        "scope": 12379,
+        "sourceUnit": 12480,
+        "src": "58:26:25",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 12378,
+        "linearizedBaseContracts": [
+          12378
+        ],
+        "name": "ILiquityBase",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "741bef1a",
+            "id": 12377,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "priceFeed",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 12373,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "134:2:25"
+            },
+            "returnParameters": {
+              "id": 12376,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12375,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12377,
+                  "src": "160:10:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IPriceFeed_$12479",
+                    "typeString": "contract IPriceFeed"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 12374,
+                    "name": "IPriceFeed",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 12479,
+                    "src": "160:10:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPriceFeed_$12479",
+                      "typeString": "contract IPriceFeed"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "159:12:25"
+            },
+            "scope": 12378,
+            "src": "116:56:25",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 12379,
+        "src": "87:87:25"
+      }
+    ],
+    "src": "33:142:25"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ILiquityBase.sol",
+      "exportedSymbols": {
+        "ILiquityBase": [
+          12378
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".11"
+          ]
+        },
+        "id": 12371,
+        "name": "PragmaDirective",
+        "src": "33:23:25"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 12480,
+          "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IPriceFeed.sol",
+          "file": "./IPriceFeed.sol",
+          "scope": 12379,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 12372,
+        "name": "ImportDirective",
+        "src": "58:26:25"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            12378
+          ],
+          "name": "ILiquityBase",
+          "scope": 12379
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "741bef1a",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "priceFeed",
+              "overrides": null,
+              "scope": 12378,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 12373,
+                "name": "ParameterList",
+                "src": "134:2:25"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 12377,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IPriceFeed",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "IPriceFeed",
+                          "referencedDeclaration": 12479,
+                          "type": "contract IPriceFeed"
+                        },
+                        "id": 12374,
+                        "name": "UserDefinedTypeName",
+                        "src": "160:10:25"
+                      }
+                    ],
+                    "id": 12375,
+                    "name": "VariableDeclaration",
+                    "src": "160:10:25"
+                  }
+                ],
+                "id": 12376,
+                "name": "ParameterList",
+                "src": "159:12:25"
+              }
+            ],
+            "id": 12377,
+            "name": "FunctionDefinition",
+            "src": "116:56:25"
+          }
+        ],
+        "id": 12378,
+        "name": "ContractDefinition",
+        "src": "87:87:25"
+      }
+    ],
+    "id": 12379,
+    "name": "SourceUnit",
+    "src": "33:142:25"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.11+commit.5ef660b1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-12-04T04:33:24.875Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

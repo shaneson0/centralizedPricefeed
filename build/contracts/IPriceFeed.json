@@ -1,0 +1,370 @@
+{
+  "contractName": "IPriceFeed",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_lastGoodPrice",
+          "type": "uint256"
+        }
+      ],
+      "name": "LastGoodPriceUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "fetchPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.11+commit.5ef660b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_lastGoodPrice\",\"type\":\"uint256\"}],\"name\":\"LastGoodPriceUpdated\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"fetchPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IPriceFeed.sol\":\"IPriceFeed\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IPriceFeed.sol\":{\"keccak256\":\"0x8831c3e2112e1c395d372b6fb591a4548f5a1ed8df63aa38ccbc817cccb4dc3d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://19460a762dc4f5c486e9075ccfe9e798b2b199168a47998bc4203028197e7d03\",\"dweb:/ipfs/QmW9Sfvm6AYHCK4NUBMzu85NAne111haHYtyRATpqSC64Z\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.6.11;\n\ninterface IPriceFeed {\n\n    // --- Events ---\n    event LastGoodPriceUpdated(uint _lastGoodPrice);\n   \n    // --- Function ---\n    function fetchPrice() external returns (uint);\n}\n",
+  "sourcePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IPriceFeed.sol",
+  "ast": {
+    "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IPriceFeed.sol",
+    "exportedSymbols": {
+      "IPriceFeed": [
+        12479
+      ]
+    },
+    "id": 12480,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12469,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:28"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 12479,
+        "linearizedBaseContracts": [
+          12479
+        ],
+        "name": "IPriceFeed",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 12473,
+            "name": "LastGoodPriceUpdated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 12472,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12471,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_lastGoodPrice",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12473,
+                  "src": "135:19:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12470,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "135:4:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "134:21:28"
+            },
+            "src": "108:48:28"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "0fdb11cf",
+            "id": 12478,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "fetchPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 12474,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "208:2:28"
+            },
+            "returnParameters": {
+              "id": 12477,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12476,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12478,
+                  "src": "229:4:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12475,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "229:4:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "228:6:28"
+            },
+            "scope": 12479,
+            "src": "189:46:28",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 12480,
+        "src": "58:179:28"
+      }
+    ],
+    "src": "33:205:28"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IPriceFeed.sol",
+      "exportedSymbols": {
+        "IPriceFeed": [
+          12479
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".11"
+          ]
+        },
+        "id": 12469,
+        "name": "PragmaDirective",
+        "src": "33:23:28"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            12479
+          ],
+          "name": "IPriceFeed",
+          "scope": 12480
+        },
+        "children": [
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "LastGoodPriceUpdated"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "_lastGoodPrice",
+                      "overrides": null,
+                      "scope": 12473,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 12470,
+                        "name": "ElementaryTypeName",
+                        "src": "135:4:28"
+                      }
+                    ],
+                    "id": 12471,
+                    "name": "VariableDeclaration",
+                    "src": "135:19:28"
+                  }
+                ],
+                "id": 12472,
+                "name": "ParameterList",
+                "src": "134:21:28"
+              }
+            ],
+            "id": 12473,
+            "name": "EventDefinition",
+            "src": "108:48:28"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "0fdb11cf",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "fetchPrice",
+              "overrides": null,
+              "scope": 12479,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 12474,
+                "name": "ParameterList",
+                "src": "208:2:28"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 12478,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 12475,
+                        "name": "ElementaryTypeName",
+                        "src": "229:4:28"
+                      }
+                    ],
+                    "id": 12476,
+                    "name": "VariableDeclaration",
+                    "src": "229:4:28"
+                  }
+                ],
+                "id": 12477,
+                "name": "ParameterList",
+                "src": "228:6:28"
+              }
+            ],
+            "id": 12478,
+            "name": "FunctionDefinition",
+            "src": "189:46:28"
+          }
+        ],
+        "id": 12479,
+        "name": "ContractDefinition",
+        "src": "58:179:28"
+      }
+    ],
+    "id": 12480,
+    "name": "SourceUnit",
+    "src": "33:205:28"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.11+commit.5ef660b1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-12-04T04:33:24.878Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

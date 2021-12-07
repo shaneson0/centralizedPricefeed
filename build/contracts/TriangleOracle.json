@@ -1,0 +1,2310 @@
+{
+  "contractName": "TriangleOracle",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "price",
+          "type": "int256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "status",
+          "type": "uint256"
+        }
+      ],
+      "name": "PutLatestTokenPrice",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_id",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "int256",
+          "name": "price",
+          "type": "int256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "putPrice",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "valueFor",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.11+commit.5ef660b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"price\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"status\",\"type\":\"uint256\"}],\"name\":\"PutLatestTokenPrice\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_id\",\"type\":\"bytes32\"},{\"internalType\":\"int256\",\"name\":\"price\",\"type\":\"int256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"putPrice\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_id\",\"type\":\"bytes32\"}],\"name\":\"valueFor\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"valueFor(bytes32)\":{\"details\":\"Exposed function pertaining to EIP standards\",\"params\":{\"_id\":\"bytes32 ID of the query\"},\"returns\":{\"_0\":\"int,uint,uint returns the value, timestamp, and status code of query\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/mac/Github/triangle-pricefeed/contracts/TriangleOracle.sol\":\"TriangleOracle\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IERC2362.sol\":{\"keccak256\":\"0x815bdb16a2aa771bc125aa2494abca98632918461ffc3b682e1872f300f5369f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a5e0dfe7b9fb791999375441c25bcfcc4a2af09d267b1918058adfc14e8b6361\",\"dweb:/ipfs/QmXQKLNj4seHyoUXu961LW6GPgMLjRzMkv7Ey2pq7xdbJ4\"]},\"/Users/mac/Github/triangle-pricefeed/contracts/Ownable.sol\":{\"keccak256\":\"0x518e96d44b3213a0bb6b0fde0d19a74133703aaffea50af69c47896ea7399064\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dfcab9bbced752f4bf6fb77d0407490620945edefa9d6af1e0eb6ac308e003ec\",\"dweb:/ipfs/QmYHhJ2pskz6Rin94x8fs5QoZq6xqm2CUCsdDrLAj4MoWT\"]},\"/Users/mac/Github/triangle-pricefeed/contracts/TriangleOracle.sol\":{\"keccak256\":\"0xbfd2a29c7810f6933c34eaabcee844e84a36789f31e339b14a85aeccd682de23\",\"urls\":[\"bzz-raw://cac5892c14c1b39f5d454a6abccca185e53ebdaab3b64fc35b501486553d8a4e\",\"dweb:/ipfs/QmQ9MnBSMRmZsiWn6EkwGSwSAd6UKZJgKBQCyoS66eNgSE\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055503373ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3610350806100bb6000396000f3fe608060405234801561001057600080fd5b5060043610610069576000357c0100000000000000000000000000000000000000000000000000000000900480631dcf42d41461006e5780638da5cb5b146100b05780638f32d59b146100fa578063f78eea831461011c575b600080fd5b6100ae6004803603606081101561008457600080fd5b8101908080359060200190929190803590602001909291908035906020019092919050505061016c565b005b6100b8610277565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101026102a0565b604051808215151515815260200191505060405180910390f35b6101486004803603602081101561013257600080fd5b81019080803590602001909291905050506102f7565b60405180848152602001838152602001828152602001935050505060405180910390f35b6101746102a0565b6101e6576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600060c8905060405180606001604052808481526020018381526020018281525060016000820151816000015560208201518160010155604082015181600201559050507f73b1bdd90ee36fdd8a5c3708a49d5f538503006bcc7fd24ddd68cff5ace0c1f183838360405180848152602001838152602001828152602001935050505060405180910390a150505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b60008060006001600001546001800154600160020154925092509250919390925056fea26469706673582212200b9576c07724205645788b5113ac7421b5336ef6735f603a671eaa4821a94f3864736f6c634300060b0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b5060043610610069576000357c0100000000000000000000000000000000000000000000000000000000900480631dcf42d41461006e5780638da5cb5b146100b05780638f32d59b146100fa578063f78eea831461011c575b600080fd5b6100ae6004803603606081101561008457600080fd5b8101908080359060200190929190803590602001909291908035906020019092919050505061016c565b005b6100b8610277565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101026102a0565b604051808215151515815260200191505060405180910390f35b6101486004803603602081101561013257600080fd5b81019080803590602001909291905050506102f7565b60405180848152602001838152602001828152602001935050505060405180910390f35b6101746102a0565b6101e6576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600060c8905060405180606001604052808481526020018381526020018281525060016000820151816000015560208201518160010155604082015181600201559050507f73b1bdd90ee36fdd8a5c3708a49d5f538503006bcc7fd24ddd68cff5ace0c1f183838360405180848152602001838152602001828152602001935050505060405180910390a150505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b60008060006001600001546001800154600160020154925092509250919390925056fea26469706673582212200b9576c07724205645788b5113ac7421b5336ef6735f603a671eaa4821a94f3864736f6c634300060b0033",
+  "immutableReferences": {},
+  "sourceMap": "86:880:8:-:0;;;;;;;;;;;;;847:10:6;838:6;;:19;;;;;;;;;;;;;;;;;;905:10;872:44;;901:1;872:44;;;;;;;;;;;;86:880:8;;;;;;",
+  "deployedSourceMap": "86:880:8:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;458:327;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;999:77:6;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1350:90;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;791:172:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;458:327;1203:9:6;:7;:9::i;:::-;1195:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;558:15:8::1;576:3;558:21;;603:113;;;;;;;;637:5;603:113;;;;667:9;603:113;;;;698:7;603:113;;::::0;589:11:::1;:127;;;;;;;;;;;;;;;;;;;;;;;;;;;732:45;752:5;758:9;769:7;732:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1259:1:6;458:327:8::0;;;:::o;999:77:6:-;1037:7;1063:6;;;;;;;;;;;1056:13;;999:77;:::o;1350:90::-;1390:4;1427:6;;;;;;;;;;;1413:20;;:10;:20;;;1406:27;;1350:90;:::o;791:172:8:-;853:6;860:7;868;895:11;:17;;;914:11;:21;;;937:11;:18;;;887:69;;;;;;791:172;;;;;:::o",
+  "source": "\npragma solidity 0.6.11;\nimport \"./Ownable.sol\";\nimport \"./Interfaces/IERC2362.sol\";\n\ncontract TriangleOracle is Ownable, IERC2362 {    \n\n    // 32 + 16 + 16 = 64 bytes\n    // default 1e+18 \n    struct PriceOracle {\n        int256 price;              // 16 bytes\n        uint256 timestamp;\n        uint256 status;           // 16 bytes\n    }\n    PriceOracle latestPrice;\n\n\n    event PutLatestTokenPrice(int256 price, uint256 timestamp, uint256 status);\n\n    function putPrice(bytes32 _id, int256 price, uint256 timestamp) public onlyOwner {\n        \n        uint256 _status = 200;\n        latestPrice = PriceOracle ({\n            price: price,\n            timestamp: timestamp,\n            status: _status\n        });\n\n        emit PutLatestTokenPrice(price,timestamp, _status);\n\n    }\n\n    function valueFor(bytes32 _id) external view override returns(int256,uint256,uint256) {\n        return (latestPrice.price, latestPrice.timestamp, latestPrice.status);\n    }\n\n}\n\n\n",
+  "sourcePath": "/Users/mac/Github/triangle-pricefeed/contracts/TriangleOracle.sol",
+  "ast": {
+    "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/TriangleOracle.sol",
+    "exportedSymbols": {
+      "TriangleOracle": [
+        795
+      ]
+    },
+    "id": 796,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 720,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1:23:8"
+      },
+      {
+        "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 721,
+        "nodeType": "ImportDirective",
+        "scope": 796,
+        "sourceUnit": 492,
+        "src": "25:23:8",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IERC2362.sol",
+        "file": "./Interfaces/IERC2362.sol",
+        "id": 722,
+        "nodeType": "ImportDirective",
+        "scope": 796,
+        "sourceUnit": 397,
+        "src": "49:35:8",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 723,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 491,
+              "src": "113:7:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$491",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 724,
+            "nodeType": "InheritanceSpecifier",
+            "src": "113:7:8"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 725,
+              "name": "IERC2362",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 396,
+              "src": "122:8:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC2362_$396",
+                "typeString": "contract IERC2362"
+              }
+            },
+            "id": 726,
+            "nodeType": "InheritanceSpecifier",
+            "src": "122:8:8"
+          }
+        ],
+        "contractDependencies": [
+          396,
+          491
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 795,
+        "linearizedBaseContracts": [
+          795,
+          396,
+          491
+        ],
+        "name": "TriangleOracle",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "TriangleOracle.PriceOracle",
+            "id": 733,
+            "members": [
+              {
+                "constant": false,
+                "id": 728,
+                "mutability": "mutable",
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 733,
+                "src": "224:12:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                },
+                "typeName": {
+                  "id": 727,
+                  "name": "int256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "224:6:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 730,
+                "mutability": "mutable",
+                "name": "timestamp",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 733,
+                "src": "271:17:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 729,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "271:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 732,
+                "mutability": "mutable",
+                "name": "status",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 733,
+                "src": "298:14:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 731,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "298:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "PriceOracle",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "195:146:8",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 735,
+            "mutability": "mutable",
+            "name": "latestPrice",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 795,
+            "src": "346:23:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_PriceOracle_$733_storage",
+              "typeString": "struct TriangleOracle.PriceOracle"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 734,
+              "name": "PriceOracle",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 733,
+              "src": "346:11:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_PriceOracle_$733_storage_ptr",
+                "typeString": "struct TriangleOracle.PriceOracle"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 743,
+            "name": "PutLatestTokenPrice",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 742,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 737,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "price",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 743,
+                  "src": "403:12:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 736,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "403:6:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 739,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 743,
+                  "src": "417:17:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 738,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "417:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 741,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "status",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 743,
+                  "src": "436:14:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 740,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "436:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "402:49:8"
+            },
+            "src": "377:75:8"
+          },
+          {
+            "body": {
+              "id": 772,
+              "nodeType": "Block",
+              "src": "539:246:8",
+              "statements": [
+                {
+                  "assignments": [
+                    755
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 755,
+                      "mutability": "mutable",
+                      "name": "_status",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 772,
+                      "src": "558:15:8",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 754,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "558:7:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 757,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "hexValue": "323030",
+                    "id": 756,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "576:3:8",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_200_by_1",
+                      "typeString": "int_const 200"
+                    },
+                    "value": "200"
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "558:21:8"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 764,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 758,
+                      "name": "latestPrice",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 735,
+                      "src": "589:11:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_PriceOracle_$733_storage",
+                        "typeString": "struct TriangleOracle.PriceOracle storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 760,
+                          "name": "price",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 747,
+                          "src": "637:5:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 761,
+                          "name": "timestamp",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 749,
+                          "src": "667:9:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 762,
+                          "name": "_status",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 755,
+                          "src": "698:7:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "id": 759,
+                        "name": "PriceOracle",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 733,
+                        "src": "603:11:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_PriceOracle_$733_storage_ptr_$",
+                          "typeString": "type(struct TriangleOracle.PriceOracle storage pointer)"
+                        }
+                      },
+                      "id": 763,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [
+                        "price",
+                        "timestamp",
+                        "status"
+                      ],
+                      "nodeType": "FunctionCall",
+                      "src": "603:113:8",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_PriceOracle_$733_memory_ptr",
+                        "typeString": "struct TriangleOracle.PriceOracle memory"
+                      }
+                    },
+                    "src": "589:127:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_PriceOracle_$733_storage",
+                      "typeString": "struct TriangleOracle.PriceOracle storage ref"
+                    }
+                  },
+                  "id": 765,
+                  "nodeType": "ExpressionStatement",
+                  "src": "589:127:8"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 767,
+                        "name": "price",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 747,
+                        "src": "752:5:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 768,
+                        "name": "timestamp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 749,
+                        "src": "758:9:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 769,
+                        "name": "_status",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 755,
+                        "src": "769:7:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 766,
+                      "name": "PutLatestTokenPrice",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 743,
+                      "src": "732:19:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_int256_$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (int256,uint256,uint256)"
+                      }
+                    },
+                    "id": 770,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "732:45:8",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 771,
+                  "nodeType": "EmitStatement",
+                  "src": "727:50:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "1dcf42d4",
+            "id": 773,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 752,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 751,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 458,
+                  "src": "529:9:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "529:9:8"
+              }
+            ],
+            "name": "putPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 750,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 745,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 773,
+                  "src": "476:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 744,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "476:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 747,
+                  "mutability": "mutable",
+                  "name": "price",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 773,
+                  "src": "489:12:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 746,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "489:6:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 749,
+                  "mutability": "mutable",
+                  "name": "timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 773,
+                  "src": "503:17:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 748,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "503:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "475:46:8"
+            },
+            "returnParameters": {
+              "id": 753,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "539:0:8"
+            },
+            "scope": 795,
+            "src": "458:327:8",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "baseFunctions": [
+              395
+            ],
+            "body": {
+              "id": 793,
+              "nodeType": "Block",
+              "src": "877:86:8",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 785,
+                          "name": "latestPrice",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 735,
+                          "src": "895:11:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_PriceOracle_$733_storage",
+                            "typeString": "struct TriangleOracle.PriceOracle storage ref"
+                          }
+                        },
+                        "id": 786,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "price",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 728,
+                        "src": "895:17:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 787,
+                          "name": "latestPrice",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 735,
+                          "src": "914:11:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_PriceOracle_$733_storage",
+                            "typeString": "struct TriangleOracle.PriceOracle storage ref"
+                          }
+                        },
+                        "id": 788,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 730,
+                        "src": "914:21:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 789,
+                          "name": "latestPrice",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 735,
+                          "src": "937:11:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_PriceOracle_$733_storage",
+                            "typeString": "struct TriangleOracle.PriceOracle storage ref"
+                          }
+                        },
+                        "id": 790,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "status",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 732,
+                        "src": "937:18:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 791,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "894:62:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_int256_$_t_uint256_$_t_uint256_$",
+                      "typeString": "tuple(int256,uint256,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 784,
+                  "id": 792,
+                  "nodeType": "Return",
+                  "src": "887:69:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "f78eea83",
+            "id": 794,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "valueFor",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 777,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "836:8:8"
+            },
+            "parameters": {
+              "id": 776,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 775,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 794,
+                  "src": "809:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 774,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "809:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "808:13:8"
+            },
+            "returnParameters": {
+              "id": 784,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 779,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 794,
+                  "src": "853:6:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 778,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "853:6:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 781,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 794,
+                  "src": "860:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 780,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "860:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 783,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 794,
+                  "src": "868:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 782,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "868:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "852:24:8"
+            },
+            "scope": 795,
+            "src": "791:172:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 796,
+        "src": "86:880:8"
+      }
+    ],
+    "src": "1:968:8"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/TriangleOracle.sol",
+      "exportedSymbols": {
+        "TriangleOracle": [
+          795
+        ]
+      },
+      "license": null
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".11"
+          ]
+        },
+        "id": 720,
+        "name": "PragmaDirective",
+        "src": "1:23:8"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 492,
+          "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Ownable.sol",
+          "file": "./Ownable.sol",
+          "scope": 796,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 721,
+        "name": "ImportDirective",
+        "src": "25:23:8"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 397,
+          "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/IERC2362.sol",
+          "file": "./Interfaces/IERC2362.sol",
+          "scope": 796,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 722,
+        "name": "ImportDirective",
+        "src": "49:35:8"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "contractDependencies": [
+            396,
+            491
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            795,
+            396,
+            491
+          ],
+          "name": "TriangleOracle",
+          "scope": 796
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Ownable",
+                  "referencedDeclaration": 491,
+                  "type": "contract Ownable"
+                },
+                "id": 723,
+                "name": "UserDefinedTypeName",
+                "src": "113:7:8"
+              }
+            ],
+            "id": 724,
+            "name": "InheritanceSpecifier",
+            "src": "113:7:8"
+          },
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IERC2362",
+                  "referencedDeclaration": 396,
+                  "type": "contract IERC2362"
+                },
+                "id": 725,
+                "name": "UserDefinedTypeName",
+                "src": "122:8:8"
+              }
+            ],
+            "id": 726,
+            "name": "InheritanceSpecifier",
+            "src": "122:8:8"
+          },
+          {
+            "attributes": {
+              "canonicalName": "TriangleOracle.PriceOracle",
+              "name": "PriceOracle",
+              "scope": 795,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "price",
+                  "overrides": null,
+                  "scope": 733,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int256",
+                      "type": "int256"
+                    },
+                    "id": 727,
+                    "name": "ElementaryTypeName",
+                    "src": "224:6:8"
+                  }
+                ],
+                "id": 728,
+                "name": "VariableDeclaration",
+                "src": "224:12:8"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "timestamp",
+                  "overrides": null,
+                  "scope": 733,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 729,
+                    "name": "ElementaryTypeName",
+                    "src": "271:7:8"
+                  }
+                ],
+                "id": 730,
+                "name": "VariableDeclaration",
+                "src": "271:17:8"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "status",
+                  "overrides": null,
+                  "scope": 733,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 731,
+                    "name": "ElementaryTypeName",
+                    "src": "298:7:8"
+                  }
+                ],
+                "id": 732,
+                "name": "VariableDeclaration",
+                "src": "298:14:8"
+              }
+            ],
+            "id": 733,
+            "name": "StructDefinition",
+            "src": "195:146:8"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "latestPrice",
+              "overrides": null,
+              "scope": 795,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct TriangleOracle.PriceOracle",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "PriceOracle",
+                  "referencedDeclaration": 733,
+                  "type": "struct TriangleOracle.PriceOracle"
+                },
+                "id": 734,
+                "name": "UserDefinedTypeName",
+                "src": "346:11:8"
+              }
+            ],
+            "id": 735,
+            "name": "VariableDeclaration",
+            "src": "346:23:8"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "PutLatestTokenPrice"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "price",
+                      "overrides": null,
+                      "scope": 743,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int256",
+                          "type": "int256"
+                        },
+                        "id": 736,
+                        "name": "ElementaryTypeName",
+                        "src": "403:6:8"
+                      }
+                    ],
+                    "id": 737,
+                    "name": "VariableDeclaration",
+                    "src": "403:12:8"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "timestamp",
+                      "overrides": null,
+                      "scope": 743,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 738,
+                        "name": "ElementaryTypeName",
+                        "src": "417:7:8"
+                      }
+                    ],
+                    "id": 739,
+                    "name": "VariableDeclaration",
+                    "src": "417:17:8"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "status",
+                      "overrides": null,
+                      "scope": 743,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 740,
+                        "name": "ElementaryTypeName",
+                        "src": "436:7:8"
+                      }
+                    ],
+                    "id": 741,
+                    "name": "VariableDeclaration",
+                    "src": "436:14:8"
+                  }
+                ],
+                "id": 742,
+                "name": "ParameterList",
+                "src": "402:49:8"
+              }
+            ],
+            "id": 743,
+            "name": "EventDefinition",
+            "src": "377:75:8"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "1dcf42d4",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "putPrice",
+              "overrides": null,
+              "scope": 795,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_id",
+                      "overrides": null,
+                      "scope": 773,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 744,
+                        "name": "ElementaryTypeName",
+                        "src": "476:7:8"
+                      }
+                    ],
+                    "id": 745,
+                    "name": "VariableDeclaration",
+                    "src": "476:11:8"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "price",
+                      "overrides": null,
+                      "scope": 773,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int256",
+                          "type": "int256"
+                        },
+                        "id": 746,
+                        "name": "ElementaryTypeName",
+                        "src": "489:6:8"
+                      }
+                    ],
+                    "id": 747,
+                    "name": "VariableDeclaration",
+                    "src": "489:12:8"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "timestamp",
+                      "overrides": null,
+                      "scope": 773,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 748,
+                        "name": "ElementaryTypeName",
+                        "src": "503:7:8"
+                      }
+                    ],
+                    "id": 749,
+                    "name": "VariableDeclaration",
+                    "src": "503:17:8"
+                  }
+                ],
+                "id": 750,
+                "name": "ParameterList",
+                "src": "475:46:8"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 753,
+                "name": "ParameterList",
+                "src": "539:0:8"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 458,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 751,
+                    "name": "Identifier",
+                    "src": "529:9:8"
+                  }
+                ],
+                "id": 752,
+                "name": "ModifierInvocation",
+                "src": "529:9:8"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        755
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "mutability": "mutable",
+                          "name": "_status",
+                          "overrides": null,
+                          "scope": 772,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint256",
+                              "type": "uint256"
+                            },
+                            "id": 754,
+                            "name": "ElementaryTypeName",
+                            "src": "558:7:8"
+                          }
+                        ],
+                        "id": 755,
+                        "name": "VariableDeclaration",
+                        "src": "558:15:8"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "323030",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "number",
+                          "type": "int_const 200",
+                          "value": "200"
+                        },
+                        "id": 756,
+                        "name": "Literal",
+                        "src": "576:3:8"
+                      }
+                    ],
+                    "id": 757,
+                    "name": "VariableDeclarationStatement",
+                    "src": "558:21:8"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct TriangleOracle.PriceOracle storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 735,
+                              "type": "struct TriangleOracle.PriceOracle storage ref",
+                              "value": "latestPrice"
+                            },
+                            "id": 758,
+                            "name": "Identifier",
+                            "src": "589:11:8"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                "price",
+                                "timestamp",
+                                "status"
+                              ],
+                              "tryCall": false,
+                              "type": "struct TriangleOracle.PriceOracle memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_int256",
+                                      "typeString": "int256"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 733,
+                                  "type": "type(struct TriangleOracle.PriceOracle storage pointer)",
+                                  "value": "PriceOracle"
+                                },
+                                "id": 759,
+                                "name": "Identifier",
+                                "src": "603:11:8"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 747,
+                                  "type": "int256",
+                                  "value": "price"
+                                },
+                                "id": 760,
+                                "name": "Identifier",
+                                "src": "637:5:8"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 749,
+                                  "type": "uint256",
+                                  "value": "timestamp"
+                                },
+                                "id": 761,
+                                "name": "Identifier",
+                                "src": "667:9:8"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 755,
+                                  "type": "uint256",
+                                  "value": "_status"
+                                },
+                                "id": 762,
+                                "name": "Identifier",
+                                "src": "698:7:8"
+                              }
+                            ],
+                            "id": 763,
+                            "name": "FunctionCall",
+                            "src": "603:113:8"
+                          }
+                        ],
+                        "id": 764,
+                        "name": "Assignment",
+                        "src": "589:127:8"
+                      }
+                    ],
+                    "id": 765,
+                    "name": "ExpressionStatement",
+                    "src": "589:127:8"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_int256",
+                                  "typeString": "int256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 743,
+                              "type": "function (int256,uint256,uint256)",
+                              "value": "PutLatestTokenPrice"
+                            },
+                            "id": 766,
+                            "name": "Identifier",
+                            "src": "732:19:8"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 747,
+                              "type": "int256",
+                              "value": "price"
+                            },
+                            "id": 767,
+                            "name": "Identifier",
+                            "src": "752:5:8"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 749,
+                              "type": "uint256",
+                              "value": "timestamp"
+                            },
+                            "id": 768,
+                            "name": "Identifier",
+                            "src": "758:9:8"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 755,
+                              "type": "uint256",
+                              "value": "_status"
+                            },
+                            "id": 769,
+                            "name": "Identifier",
+                            "src": "769:7:8"
+                          }
+                        ],
+                        "id": 770,
+                        "name": "FunctionCall",
+                        "src": "732:45:8"
+                      }
+                    ],
+                    "id": 771,
+                    "name": "EmitStatement",
+                    "src": "727:50:8"
+                  }
+                ],
+                "id": 772,
+                "name": "Block",
+                "src": "539:246:8"
+              }
+            ],
+            "id": 773,
+            "name": "FunctionDefinition",
+            "src": "458:327:8"
+          },
+          {
+            "attributes": {
+              "baseFunctions": [
+                395
+              ],
+              "documentation": null,
+              "functionSelector": "f78eea83",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "valueFor",
+              "scope": 795,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "overrides": [
+                    null
+                  ]
+                },
+                "id": 777,
+                "name": "OverrideSpecifier",
+                "src": "836:8:8"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_id",
+                      "overrides": null,
+                      "scope": 794,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 774,
+                        "name": "ElementaryTypeName",
+                        "src": "809:7:8"
+                      }
+                    ],
+                    "id": 775,
+                    "name": "VariableDeclaration",
+                    "src": "809:11:8"
+                  }
+                ],
+                "id": 776,
+                "name": "ParameterList",
+                "src": "808:13:8"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 794,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int256",
+                          "type": "int256"
+                        },
+                        "id": 778,
+                        "name": "ElementaryTypeName",
+                        "src": "853:6:8"
+                      }
+                    ],
+                    "id": 779,
+                    "name": "VariableDeclaration",
+                    "src": "853:6:8"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 794,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 780,
+                        "name": "ElementaryTypeName",
+                        "src": "860:7:8"
+                      }
+                    ],
+                    "id": 781,
+                    "name": "VariableDeclaration",
+                    "src": "860:7:8"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 794,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 782,
+                        "name": "ElementaryTypeName",
+                        "src": "868:7:8"
+                      }
+                    ],
+                    "id": 783,
+                    "name": "VariableDeclaration",
+                    "src": "868:7:8"
+                  }
+                ],
+                "id": 784,
+                "name": "ParameterList",
+                "src": "852:24:8"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 784
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(int256,uint256,uint256)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "price",
+                              "referencedDeclaration": 728,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 735,
+                                  "type": "struct TriangleOracle.PriceOracle storage ref",
+                                  "value": "latestPrice"
+                                },
+                                "id": 785,
+                                "name": "Identifier",
+                                "src": "895:11:8"
+                              }
+                            ],
+                            "id": 786,
+                            "name": "MemberAccess",
+                            "src": "895:17:8"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "timestamp",
+                              "referencedDeclaration": 730,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 735,
+                                  "type": "struct TriangleOracle.PriceOracle storage ref",
+                                  "value": "latestPrice"
+                                },
+                                "id": 787,
+                                "name": "Identifier",
+                                "src": "914:11:8"
+                              }
+                            ],
+                            "id": 788,
+                            "name": "MemberAccess",
+                            "src": "914:21:8"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "status",
+                              "referencedDeclaration": 732,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 735,
+                                  "type": "struct TriangleOracle.PriceOracle storage ref",
+                                  "value": "latestPrice"
+                                },
+                                "id": 789,
+                                "name": "Identifier",
+                                "src": "937:11:8"
+                              }
+                            ],
+                            "id": 790,
+                            "name": "MemberAccess",
+                            "src": "937:18:8"
+                          }
+                        ],
+                        "id": 791,
+                        "name": "TupleExpression",
+                        "src": "894:62:8"
+                      }
+                    ],
+                    "id": 792,
+                    "name": "Return",
+                    "src": "887:69:8"
+                  }
+                ],
+                "id": 793,
+                "name": "Block",
+                "src": "877:86:8"
+              }
+            ],
+            "id": 794,
+            "name": "FunctionDefinition",
+            "src": "791:172:8"
+          }
+        ],
+        "id": 795,
+        "name": "ContractDefinition",
+        "src": "86:880:8"
+      }
+    ],
+    "id": 796,
+    "name": "SourceUnit",
+    "src": "1:968:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.11+commit.5ef660b1.Linux.g++"
+  },
+  "networks": {
+    "1": {
+      "events": {
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        "0x73b1bdd90ee36fdd8a5c3708a49d5f538503006bcc7fd24ddd68cff5ace0c1f1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "int256",
+              "name": "price",
+              "type": "int256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "timestamp",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "status",
+              "type": "uint256"
+            }
+          ],
+          "name": "PutLatestTokenPrice",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "cfxtest:ace8s16jru09036avv7xtp9s3tad4z68wazn9v995z",
+      "transactionHash": "0x13a912a41143b96cabdb68ac42e7ac38b32200d0e2e1be1b99366632f364c6a4"
+    }
+  },
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-12-07T12:42:33.831Z",
+  "networkType": "conflux",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "isOwner()": {
+        "details": "Returns true if the caller is the current owner."
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "valueFor(bytes32)": {
+        "details": "Exposed function pertaining to EIP standards",
+        "params": {
+          "_id": "bytes32 ID of the query"
+        },
+        "returns": {
+          "_0": "int,uint,uint returns the value, timestamp, and status code of query"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,994 @@
+{
+  "contractName": "ICommunityIssuance",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_lqtyTokenAddress",
+          "type": "address"
+        }
+      ],
+      "name": "LQTYTokenAddressSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_stabilityPoolAddress",
+          "type": "address"
+        }
+      ],
+      "name": "StabilityPoolAddressSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_totalLQTYIssued",
+          "type": "uint256"
+        }
+      ],
+      "name": "TotalLQTYIssuedUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_lqtyTokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_stabilityPoolAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setAddresses",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "issueLQTY",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_LQTYamount",
+          "type": "uint256"
+        }
+      ],
+      "name": "sendLQTY",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.11+commit.5ef660b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_lqtyTokenAddress\",\"type\":\"address\"}],\"name\":\"LQTYTokenAddressSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_stabilityPoolAddress\",\"type\":\"address\"}],\"name\":\"StabilityPoolAddressSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_totalLQTYIssued\",\"type\":\"uint256\"}],\"name\":\"TotalLQTYIssuedUpdated\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"issueLQTY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_LQTYamount\",\"type\":\"uint256\"}],\"name\":\"sendLQTY\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_lqtyTokenAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_stabilityPoolAddress\",\"type\":\"address\"}],\"name\":\"setAddresses\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ICommunityIssuance.sol\":\"ICommunityIssuance\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ICommunityIssuance.sol\":{\"keccak256\":\"0xde46f309c62c632231a7f5d5429f15530b17e2b12fd9e64c13a36dee27c4ce70\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://66fb467c3d928df627a664e03d971e28f1d0705fa560ffc357f4730fd6c63742\",\"dweb:/ipfs/QmYqw57ab9fNV2yUFeABDGYJcs4TZJ29DVq6EYz3XDiJKg\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.6.11;\n\ninterface ICommunityIssuance { \n    \n    // --- Events ---\n    \n    event LQTYTokenAddressSet(address _lqtyTokenAddress);\n    event StabilityPoolAddressSet(address _stabilityPoolAddress);\n    event TotalLQTYIssuedUpdated(uint _totalLQTYIssued);\n\n    // --- Functions ---\n\n    function setAddresses(address _lqtyTokenAddress, address _stabilityPoolAddress) external;\n\n    function issueLQTY() external returns (uint);\n\n    function sendLQTY(address _account, uint _LQTYamount) external;\n}\n",
+  "sourcePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ICommunityIssuance.sol",
+  "ast": {
+    "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ICommunityIssuance.sol",
+    "exportedSymbols": {
+      "ICommunityIssuance": [
+        12116
+      ]
+    },
+    "id": 12117,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12084,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:19"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 12116,
+        "linearizedBaseContracts": [
+          12116
+        ],
+        "name": "ICommunityIssuance",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 12088,
+            "name": "LQTYTokenAddressSet",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 12087,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12086,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_lqtyTokenAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12088,
+                  "src": "152:25:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12085,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "152:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "151:27:19"
+            },
+            "src": "126:53:19"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 12092,
+            "name": "StabilityPoolAddressSet",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 12091,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12090,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_stabilityPoolAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12092,
+                  "src": "214:29:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12089,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "214:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "213:31:19"
+            },
+            "src": "184:61:19"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 12096,
+            "name": "TotalLQTYIssuedUpdated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 12095,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12094,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_totalLQTYIssued",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12096,
+                  "src": "279:21:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12093,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "279:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "278:23:19"
+            },
+            "src": "250:52:19"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "90107afe",
+            "id": 12103,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setAddresses",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 12101,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12098,
+                  "mutability": "mutable",
+                  "name": "_lqtyTokenAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12103,
+                  "src": "356:25:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12097,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "356:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12100,
+                  "mutability": "mutable",
+                  "name": "_stabilityPoolAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12103,
+                  "src": "383:29:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12099,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "383:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "355:58:19"
+            },
+            "returnParameters": {
+              "id": 12102,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "422:0:19"
+            },
+            "scope": 12116,
+            "src": "334:89:19",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "46ad34d9",
+            "id": 12108,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "issueLQTY",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 12104,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "447:2:19"
+            },
+            "returnParameters": {
+              "id": 12107,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12106,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12108,
+                  "src": "468:4:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12105,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "468:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "467:6:19"
+            },
+            "scope": 12116,
+            "src": "429:45:19",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "614d2ab6",
+            "id": 12115,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sendLQTY",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 12113,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12110,
+                  "mutability": "mutable",
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12115,
+                  "src": "498:16:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12109,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "498:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12112,
+                  "mutability": "mutable",
+                  "name": "_LQTYamount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 12115,
+                  "src": "516:16:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12111,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "516:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "497:36:19"
+            },
+            "returnParameters": {
+              "id": 12114,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "542:0:19"
+            },
+            "scope": 12116,
+            "src": "480:63:19",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 12117,
+        "src": "58:487:19"
+      }
+    ],
+    "src": "33:513:19"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Interfaces/ICommunityIssuance.sol",
+      "exportedSymbols": {
+        "ICommunityIssuance": [
+          12116
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".11"
+          ]
+        },
+        "id": 12084,
+        "name": "PragmaDirective",
+        "src": "33:23:19"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            12116
+          ],
+          "name": "ICommunityIssuance",
+          "scope": 12117
+        },
+        "children": [
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "LQTYTokenAddressSet"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "_lqtyTokenAddress",
+                      "overrides": null,
+                      "scope": 12088,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 12085,
+                        "name": "ElementaryTypeName",
+                        "src": "152:7:19"
+                      }
+                    ],
+                    "id": 12086,
+                    "name": "VariableDeclaration",
+                    "src": "152:25:19"
+                  }
+                ],
+                "id": 12087,
+                "name": "ParameterList",
+                "src": "151:27:19"
+              }
+            ],
+            "id": 12088,
+            "name": "EventDefinition",
+            "src": "126:53:19"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "StabilityPoolAddressSet"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "_stabilityPoolAddress",
+                      "overrides": null,
+                      "scope": 12092,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 12089,
+                        "name": "ElementaryTypeName",
+                        "src": "214:7:19"
+                      }
+                    ],
+                    "id": 12090,
+                    "name": "VariableDeclaration",
+                    "src": "214:29:19"
+                  }
+                ],
+                "id": 12091,
+                "name": "ParameterList",
+                "src": "213:31:19"
+              }
+            ],
+            "id": 12092,
+            "name": "EventDefinition",
+            "src": "184:61:19"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "TotalLQTYIssuedUpdated"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "_totalLQTYIssued",
+                      "overrides": null,
+                      "scope": 12096,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 12093,
+                        "name": "ElementaryTypeName",
+                        "src": "279:4:19"
+                      }
+                    ],
+                    "id": 12094,
+                    "name": "VariableDeclaration",
+                    "src": "279:21:19"
+                  }
+                ],
+                "id": 12095,
+                "name": "ParameterList",
+                "src": "278:23:19"
+              }
+            ],
+            "id": 12096,
+            "name": "EventDefinition",
+            "src": "250:52:19"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "90107afe",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setAddresses",
+              "overrides": null,
+              "scope": 12116,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_lqtyTokenAddress",
+                      "overrides": null,
+                      "scope": 12103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 12097,
+                        "name": "ElementaryTypeName",
+                        "src": "356:7:19"
+                      }
+                    ],
+                    "id": 12098,
+                    "name": "VariableDeclaration",
+                    "src": "356:25:19"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_stabilityPoolAddress",
+                      "overrides": null,
+                      "scope": 12103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 12099,
+                        "name": "ElementaryTypeName",
+                        "src": "383:7:19"
+                      }
+                    ],
+                    "id": 12100,
+                    "name": "VariableDeclaration",
+                    "src": "383:29:19"
+                  }
+                ],
+                "id": 12101,
+                "name": "ParameterList",
+                "src": "355:58:19"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 12102,
+                "name": "ParameterList",
+                "src": "422:0:19"
+              }
+            ],
+            "id": 12103,
+            "name": "FunctionDefinition",
+            "src": "334:89:19"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "46ad34d9",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "issueLQTY",
+              "overrides": null,
+              "scope": 12116,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 12104,
+                "name": "ParameterList",
+                "src": "447:2:19"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 12108,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 12105,
+                        "name": "ElementaryTypeName",
+                        "src": "468:4:19"
+                      }
+                    ],
+                    "id": 12106,
+                    "name": "VariableDeclaration",
+                    "src": "468:4:19"
+                  }
+                ],
+                "id": 12107,
+                "name": "ParameterList",
+                "src": "467:6:19"
+              }
+            ],
+            "id": 12108,
+            "name": "FunctionDefinition",
+            "src": "429:45:19"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "614d2ab6",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "sendLQTY",
+              "overrides": null,
+              "scope": 12116,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_account",
+                      "overrides": null,
+                      "scope": 12115,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 12109,
+                        "name": "ElementaryTypeName",
+                        "src": "498:7:19"
+                      }
+                    ],
+                    "id": 12110,
+                    "name": "VariableDeclaration",
+                    "src": "498:16:19"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_LQTYamount",
+                      "overrides": null,
+                      "scope": 12115,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 12111,
+                        "name": "ElementaryTypeName",
+                        "src": "516:4:19"
+                      }
+                    ],
+                    "id": 12112,
+                    "name": "VariableDeclaration",
+                    "src": "516:16:19"
+                  }
+                ],
+                "id": 12113,
+                "name": "ParameterList",
+                "src": "497:36:19"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 12114,
+                "name": "ParameterList",
+                "src": "542:0:19"
+              }
+            ],
+            "id": 12115,
+            "name": "FunctionDefinition",
+            "src": "480:63:19"
+          }
+        ],
+        "id": 12116,
+        "name": "ContractDefinition",
+        "src": "58:487:19"
+      }
+    ],
+    "id": 12117,
+    "name": "SourceUnit",
+    "src": "33:513:19"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.11+commit.5ef660b1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-12-04T04:33:24.868Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

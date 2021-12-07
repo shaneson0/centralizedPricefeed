@@ -1,0 +1,228 @@
+{
+  "contractName": "BaseMath",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "DECIMAL_PRECISION",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.11+commit.5ef660b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"DECIMAL_PRECISION\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/mac/Github/triangle-pricefeed/contracts/Dependencies/BaseMath.sol\":\"BaseMath\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/mac/Github/triangle-pricefeed/contracts/Dependencies/BaseMath.sol\":{\"keccak256\":\"0x7e1369ca5cb09e818e345a2def19a261401f79c985a6030b55b7311dd6f53be4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://21c4e37c07fa164f1ae02336d8451d43615cd7bf11f9f404e3e082864d898f9e\",\"dweb:/ipfs/QmbePtvXNQD1KVURtNd1EKEVVGse8MJrW5EUQzuGgP8iiW\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50608b8061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063a20baee614602d575b600080fd5b60336049565b6040518082815260200191505060405180910390f35b670de0b6b3a76400008156fea2646970667358221220779f206cdb51b40813443d9cc650d7c42e0ee111dc859b92aa2f5fc6fab88dff64736f6c634300060b0033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063a20baee614602d575b600080fd5b60336049565b6040518082815260200191505060405180910390f35b670de0b6b3a76400008156fea2646970667358221220779f206cdb51b40813443d9cc650d7c42e0ee111dc859b92aa2f5fc6fab88dff64736f6c634300060b0033",
+  "immutableReferences": {},
+  "sourceMap": "58:72:1:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "58:72:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;82:45;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;123:4;82:45;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.11;\n\n\ncontract BaseMath {\n    uint constant public DECIMAL_PRECISION = 1e18;\n}\n",
+  "sourcePath": "/Users/mac/Github/triangle-pricefeed/contracts/Dependencies/BaseMath.sol",
+  "ast": {
+    "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Dependencies/BaseMath.sol",
+    "exportedSymbols": {
+      "BaseMath": [
+        51
+      ]
+    },
+    "id": 52,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 47,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 51,
+        "linearizedBaseContracts": [
+          51
+        ],
+        "name": "BaseMath",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "a20baee6",
+            "id": 50,
+            "mutability": "constant",
+            "name": "DECIMAL_PRECISION",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 51,
+            "src": "82:45:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 48,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "82:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31653138",
+              "id": 49,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "123:4:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                "typeString": "int_const 1000000000000000000"
+              },
+              "value": "1e18"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 52,
+        "src": "58:72:1"
+      }
+    ],
+    "src": "32:99:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/mac/Github/triangle-pricefeed/contracts/Dependencies/BaseMath.sol",
+      "exportedSymbols": {
+        "BaseMath": [
+          51
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".11"
+          ]
+        },
+        "id": 47,
+        "name": "PragmaDirective",
+        "src": "32:23:1"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            51
+          ],
+          "name": "BaseMath",
+          "scope": 52
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": true,
+              "functionSelector": "a20baee6",
+              "mutability": "constant",
+              "name": "DECIMAL_PRECISION",
+              "overrides": null,
+              "scope": 51,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 48,
+                "name": "ElementaryTypeName",
+                "src": "82:4:1"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "31653138",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 1000000000000000000",
+                  "value": "1e18"
+                },
+                "id": 49,
+                "name": "Literal",
+                "src": "123:4:1"
+              }
+            ],
+            "id": 50,
+            "name": "VariableDeclaration",
+            "src": "82:45:1"
+          }
+        ],
+        "id": 51,
+        "name": "ContractDefinition",
+        "src": "58:72:1"
+      }
+    ],
+    "id": 52,
+    "name": "SourceUnit",
+    "src": "32:99:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.11+commit.5ef660b1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-12-04T04:33:24.325Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
