@@ -36,31 +36,6 @@ module.exports = {
    */
 
   networks: {
-    mainnet: {
-      host: 'test.confluxrpc.com',     // Conflux provides public RPC services for testnet
-      port: 80,
-      network_id: 1,       // Conflux testnet networkId is 1
-      privateKeys: ['0B6A7A4CF9C143421D948E6E33C7C84BF6882E39F8B2EE56FD29303E659E4F3B']  //  Adding the account private key used for sending transactions
-
-    },
-    testnet: {
-      host: 'test.confluxrpc.com',     // Conflux provides public RPC services for testnet
-      port: 80,
-      network_id: 1,       // Conflux testnet networkId is 1
-      privateKeys: ['0B6A7A4CF9C143421D948E6E33C7C84BF6882E39F8B2EE56FD29303E659E4F3B']  //  Adding the account private key used for sending transactions
-    },
-    localhost: {
-      host: 'localhost',     // Conflux provides public RPC services for testnet
-      port: 8545,
-      network_id: 31337,       // Conflux testnet networkId is 1
-      privateKeys: ['0B6A7A4CF9C143421D948E6E33C7C84BF6882E39F8B2EE56FD29303E659E4F3B']  //  Adding the account private key used for sending transactions
-    },
-    localhost_junior: {
-      host: 'localhost',     // Conflux provides public RPC services for testnet
-      port: 12537,
-      network_id: 999,       // Conflux testnet networkId is 1
-      privateKeys: ['3cc9a51625d7c4592382dcd2741c91f3076ca64ad7efffc210bb7c57056c98bc']  //  Adding the account private key used for sending transactions
-    }
   },
   // Set default mocha options here, use special reporters etc.
   mocha: {
