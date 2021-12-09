@@ -13,25 +13,25 @@ current_path = os.path.dirname(os.path.abspath(__file__))
 import traceback
 from util import *  
 import time
+from config import TRIANGLE_CONTRACT_ADDRESS, owner_private_key, owner_user_address
 
-class ConfluxService():
+
+class ContractService():
 
     def __init__(self) -> None:
         self.provider = HTTPProvider('https://test.confluxrpc.com')
         self.c = Conflux(self.provider)
 
     def getContractAddress(self):
-        # contract_address 是要读文件的
-        self.contract_address = "cfxtest:ace8s16jru09036avv7xtp9s3tad4z68wazn9v995z"
+        self.contract_address = TRIANGLE_CONTRACT_ADDRESS
         return self.contract_address
             
     def getPrivateKey(self):
-        # private key还是要读文件的
-        private_key = ""
+        private_key = owner_private_key
         return private_key
 
     def getOwnerAddress(self):
-        owenrAdderss = "cfxtest:aate5nxwmdrdavgwjb46ntn3k6zfym9z76s1jckvud"
+        owenrAdderss = owner_user_address
         return owenrAdderss
 
     def getContractABI(self):
@@ -126,12 +126,6 @@ class ConfluxService():
             traceback.print_exc()
             return 
 
-    # from service.oraclePriceService import OraclePriceService
-    # oraclepriceservice = OraclePriceService()
-    # res, price, avg_time, source = oraclepriceservice.getRemotePrice(symbol)
-    # putRemotePriceResult, txHash = oraclepriceservice.putRemotePrice(price, source, symbol)
-
-
 if __name__ == "__main__":
 
     from eth_utils import to_bytes
@@ -143,15 +137,15 @@ if __name__ == "__main__":
     price = 207733055000000032
 
     
-    confluxServiceInstance = ConfluxService()
+    contractServiceInstance = ContractService()
 
     #   function putPrice(bytes32 _id, int256 price, uint256 timestamp) public onlyOwner {
     arguments = [assertId, price, timestamp]
-    Result, TxHash = confluxServiceInstance.putPrice(arguments)
+    Result, TxHash = contractServiceInstance.putPrice(arguments)
     print(Result, TxHash)
 
     # Get Price
-    Result, currentPrice = confluxServiceInstance.getPrice(assertId)
+    Result, currentPrice = contractServiceInstance.getPrice(assertId)
     print(Result, currentPrice)
 
 # True 0x17ce68fb96d0e8fd1ba243b6003e022f1e3a944a8818182ee280883c5336c086

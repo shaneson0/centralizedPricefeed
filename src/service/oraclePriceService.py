@@ -12,7 +12,7 @@ from dao.oraclePriceDao import oraclePriceDao
 from rpc import BinanceHolder, OkexHolder
 from rpc.BinanceHolder import BinanceHolder
 from rpc.OkexHolder import OkexHolder
-from service.confluxService import ConfluxService
+from service.contractService import ContractService
 import json
 
 class OraclePriceService():
@@ -21,7 +21,7 @@ class OraclePriceService():
         self.oracleDao = oraclePriceDao()
         self.binanceHolder = BinanceHolder()
         self.okexHolder = OkexHolder()
-        self.confluxService = ConfluxService()
+        self.confluxService = ContractService()
 
 
     # price = 329240000
