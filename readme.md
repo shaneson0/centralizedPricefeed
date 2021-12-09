@@ -19,7 +19,7 @@ https://testnet.confluxscan.io/address/cfxtest:ace8s16jru09036avv7xtp9s3tad4z68w
 ![image.png](pic/confluxscan.png)
 
 
-## Perpare
+## Prepare
 
 ``` bash
 
