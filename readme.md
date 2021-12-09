@@ -16,6 +16,7 @@ Contract Deail:
 https://testnet.confluxscan.io/address/cfxtest:ace8s16jru09036avv7xtp9s3tad4z68wazn9v995z
 
 
+![image.png](pic/confluxscan.png)
 
 
 ## Perpare
