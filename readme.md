@@ -11,6 +11,10 @@
 
 Centralized-Pricefeed is a centralized blockchain oracle service, reading data from binance and okex api, and writing data to the contract. 
 
+Contract Deail: 
+
+https://testnet.confluxscan.io/address/cfxtest:ace8s16jru09036avv7xtp9s3tad4z68wazn9v995z
+
 
 
 
@@ -78,46 +82,15 @@ import db from src/db/oracle_price.sql
 
 cd src
 
-python task/readLatestPrice.py --symbol CFX
+python run.py --symbol CFX
 
 ```
 
-### Usage Example
+## Communication
 
-``` python
+Hope to help blockchain to build a centralized blockchain oracle service. If you find any question, pelease eamil: 781244184@qq.com or csx.software.engineer@gmail.com. Welcome any PR here.
 
-from conflux import (
-    Account,
-    Conflux,
-    HTTPProvider,
-)
-import json
-from cfx_address import Address
-import os
-current_path = os.path.dirname(os.path.abspath(__file__))
-import traceback
 
-provider = HTTPProvider('https://test.confluxrpc.com')
-c = Conflux(provider)
-
-def test_contract_call(contract, triangleOracle_abi_str):
-    try:
-        # c.call_contract_method(contract, triangleOracle_abi_str, "putPrice", price, source, symbol, price_dimension)
-        currentPrice = c.call_contract_method(contract, triangleOracle_abi_str, "getPrice")
-        print("currentPrice: ", currentPrice)
-
-    except:
-        traceback.print_exc()
-
-with open(current_path + '/../build/triangleOracle.abi') as json_file:
-
-    triangleOracle_abi = json_file.read()
-    contract_address = "cfxtest:acdseeaw57ktgz85sfy3g0ntgnr1vf59v2aznxpd1c"
-
-    test_contract_call(contract_address, triangleOracle_abi)
-    # currentPrice:  334698400000000000
-
-```
 
 
 
