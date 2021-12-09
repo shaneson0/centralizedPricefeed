@@ -9,7 +9,7 @@
 
 # Centralized-Pricefeed
 
-Centralized-Pricefeed is a Centralized blockchain oracle service, reading data from binance and okex api, and writing data to the contract. 
+Centralized-Pricefeed is a centralized blockchain oracle service, reading data from binance and okex api, and writing data to the contract. 
 
 
 
@@ -17,7 +17,6 @@ Centralized-Pricefeed is a Centralized blockchain oracle service, reading data f
 ## Perpare
 
 ``` bash
-
 
 npm install -g conflux-truffle
 
